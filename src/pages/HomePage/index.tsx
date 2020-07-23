@@ -1,6 +1,7 @@
 import React from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-import { Container } from './styles';
+import { Container, IconsContainer } from './styles';
 
 const HomePage: React.FC = () => {
   return (
@@ -14,6 +15,15 @@ const HomePage: React.FC = () => {
         <a href="/#">Contact</a>
         <a href="/#">Resume</a>
       </nav>
+
+      <IconsContainer>
+        <a href="https://github.com/vinisklin">
+          <FaGithub size={40} />
+        </a>
+        <a href="https://www.linkedin.com/in/vinicius-klingenfus/">
+          <FaLinkedin size={40} />
+        </a>
+      </IconsContainer>
     </Container>
   );
 };

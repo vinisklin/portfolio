@@ -47,3 +47,25 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const IconsContainer = styled.div`
+  margin-bottom: 3rem;
+
+  a {
+    & + a {
+      margin-left: 1.5rem;
+    }
+
+    svg {
+      transition: transform 1.2s;
+
+      padding: 0.5rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+`;
