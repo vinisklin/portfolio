@@ -54,4 +54,10 @@ export const ContentBox = styled.div`
     letter-spacing: 0.3rem;
     text-transform: uppercase;
   }
+
+  p {
+    margin-bottom: 3rem;
+
+    text-align: justify;
+  }
 `;
