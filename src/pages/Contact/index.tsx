@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
           <a href="https://www.linkedin.com/in/vinicius-klingenfus/">
             <FaLinkedin size={40} />
           </a>
-          <a href="https://www.linkedin.com/in/vinicius-klingenfus/">
+          <a href="mailto:vinisklin@gmail.com">
             <MdMail size={40} />
           </a>
         </nav>

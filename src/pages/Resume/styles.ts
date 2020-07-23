@@ -24,7 +24,8 @@ export const ContentBox = styled.div`
   width: 90vw;
   position: relative;
 
-  padding: 5rem 4rem 2.4rem;
+  padding: 6rem 5rem 2.4rem;
+  border-radius: 5px;
 
   background-color: rgba(0, 0, 0, 0.5);
   animation: ${appearFromLeft} 1s;

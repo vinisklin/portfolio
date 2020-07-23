@@ -24,7 +24,8 @@ export const ContentBox = styled.div`
   width: 90vw;
   position: relative;
 
-  padding: 5rem 4rem 2.4rem;
+  padding: 6rem 5rem 2.4rem;
+  border-radius: 5px;
 
   background-color: rgba(0, 0, 0, 0.5);
   animation: ${appearFromLeft} 1s;
@@ -52,5 +53,25 @@ export const ContentBox = styled.div`
     line-height: 5rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+  }
+
+  nav {
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    svg {
+      padding: 0.5rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      transition: transform 1.2s;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
   }
 `;
