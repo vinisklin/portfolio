@@ -11,10 +11,12 @@ export const Container = styled.div`
   h1 {
     letter-spacing: 0.1rem;
     margin-bottom: 3rem;
+    text-transform: uppercase;
   }
 
   h4 {
     margin-bottom: 6rem;
+    text-transform: uppercase;
   }
 
   nav {

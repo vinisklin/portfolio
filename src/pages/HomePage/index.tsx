@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 import { Container, IconsContainer } from './styles';
@@ -6,14 +7,14 @@ import { Container, IconsContainer } from './styles';
 const HomePage: React.FC = () => {
   return (
     <Container>
-      <h1>VINICIUS KLINGENFUS</h1>
-      <h4>FULL STACK DEVELOPER</h4>
+      <h1>Vinicius Klingenfus</h1>
+      <h4>Full Stack Developer</h4>
 
       <nav>
-        <a href="/#">My Projects</a>
-        <a href="/#">About Me</a>
-        <a href="/#">Contact</a>
-        <a href="/#">Resume</a>
+        <Link to="/projects">My Projects</Link>
+        <Link to="/about-me">About Me</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/resume">Resume</Link>
       </nav>
 
       <IconsContainer>

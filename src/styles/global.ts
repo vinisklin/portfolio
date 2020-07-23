@@ -15,6 +15,7 @@ export default createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
     background: url(${background}) center no-repeat;
     background-size: cover;
     /* background-color: #2d3436;
