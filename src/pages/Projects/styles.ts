@@ -55,3 +55,53 @@ export const ContentBox = styled.div`
     text-transform: uppercase;
   }
 `;
+
+export const ReposContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
+export const RepositoryBox = styled.a`
+  width: 48%;
+  height: min-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0.6rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+
+  transition: color 2s;
+
+  &:hover {
+    color: #999;
+    /* color: linear-gradient(90deg, #ff8a00, #e52e71); */
+    /* border-color: linear-gradient(90deg, #ff8a00, #e52e71); */
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    max-height: 7.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  div {
+    margin-top: 0.8rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;

@@ -2,22 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdIndeterminateCheckBox } from 'react-icons/md';
 
-import { Container, ContentBox } from './styles';
+import { Container, ContentBox, ReposContainer, RepositoryBox } from './styles';
 
 interface IRepository {
   name: string;
   description: string;
-  created_at: Date;
+  language: string;
+  created_at: string;
   html_url: string;
+}
+
+function formatDate(date: string): string {
+  const stringToDate = new Date(date);
+  const formatter = Intl.DateTimeFormat('pt-BR');
+
+  console.log(formatter.format(stringToDate));
+  return formatter.format(stringToDate);
 }
 
 const Projects: React.FC = () => {
   const [repositories, setRepositories] = useState<IRepository[]>([]);
   // Consumes GitHub API to get repos info
   useEffect(() => {
-    async function getRepositories() {
+    async function getRepositoriesFromApi() {
       const response = await axios.get<IRepository[]>(
         'https://api.github.com/users/vinisklin/repos',
       );
@@ -25,14 +34,15 @@ const Projects: React.FC = () => {
       const githubRepos: IRepository[] = response.data.map(repository => ({
         name: repository.name,
         description: repository.description,
-        created_at: repository.created_at,
+        language: repository.language,
+        created_at: formatDate(repository.created_at),
         html_url: repository.html_url,
       }));
 
       setRepositories(githubRepos);
     }
 
-    getRepositories();
+    getRepositoriesFromApi();
   }, []);
 
   return (
@@ -44,9 +54,18 @@ const Projects: React.FC = () => {
 
         <h2>My Projects</h2>
 
-        {repositories.map(repository => (
-          <h4>{repository.name}</h4>
-        ))}
+        <ReposContainer>
+          {repositories.map(repository => (
+            <RepositoryBox key={repository.name} href={repository.html_url}>
+              <h3>{repository.name}</h3>
+              <p>{repository.description}</p>
+              <div>
+                <span>{repository.language}</span>
+                <p>{repository.created_at}</p>
+              </div>
+            </RepositoryBox>
+          ))}
+        </ReposContainer>
       </ContentBox>
     </Container>
   );
