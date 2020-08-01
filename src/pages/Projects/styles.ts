@@ -77,10 +77,11 @@ export const RepositoryBox = styled.a`
   border: 1px solid #fff;
   border-radius: 5px;
 
-  transition: color 2s;
+  transition: color 0.5s;
 
   &:hover {
     color: #999;
+    border-color: #999;
     /* color: linear-gradient(90deg, #ff8a00, #e52e71); */
     /* border-color: linear-gradient(90deg, #ff8a00, #e52e71); */
   }
